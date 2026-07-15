@@ -1,0 +1,94 @@
+name: Package Publishing
+
+on:
+  release:
+    types:
+      - published
+  push:
+    branches:
+      - 'feature/*'
+
+concurrency:
+  group: publishing-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  release-build:
+    name: Build package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+          fetch-tags: true
+      
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: '2.4.1'
+          virtualenvs-create: true
+          virtualenvs-in-project: true
+      
+      - name: Generate and setup version with development metadata
+        id: generate_dev_version
+        if: github.event_name == 'push'
+        run: |
+          SHORT_SHA=$(git rev-parse --short=8 HEAD)
+          DEV_NUM=$((16#$SHORT_SHA))
+          LAST_STABLE_TAG=$(git describe --tags --abbrev=0 origin/master 2>/dev/null || echo "1.0.0")
+          echo "VERSION=${LAST_STABLE_TAG}.dev${DEV_NUM}" >> $GITHUB_OUTPUT
+          poetry version "${VERSION}"
+      
+      - name: Show version with development metadata
+        if: github.event_name == 'push'
+        run: |
+          echo "Version: ${{ steps.generate_dev_version.outputs.VERSION }}"
+
+      - name: Build the Package        
+        run: |
+          poetry build
+
+      # TODO: Add step wheel build verification (Run example_app test for example)
+      # - name: Verify that build is correct
+      #   run: smth
+
+      - name: Upload dists
+        uses: actions/upload-artifact@v7
+        with:
+          name: dist
+          path: dist
+          retention-days: 1
+
+  pypi-publish:
+    name: Publish package
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    needs:
+      - release-build
+    permissions:
+      id-token: write
+
+    environment:
+      name: pypi
+
+    steps:
+      - name: Retrieve release distributions
+        uses: actions/download-artifact@v7
+        with:
+          name: dist
+          path: dist
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.14.0
