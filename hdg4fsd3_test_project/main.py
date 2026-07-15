@@ -1,3 +1,7 @@
+def cookAppleCake() -> str:
+    return "Apple Cake"
+
+
 def main() -> None:
     return 0
 
