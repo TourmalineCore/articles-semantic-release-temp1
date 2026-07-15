@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.3.0...1.4.0) (2026-07-15)
+
+### Features
+
+* update changelog generation config ([424d48d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/424d48da90f35d862c97ac49d7f8b2dd9d7a8620))
+* update changelog generation config ([9c598c2](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/9c598c276099629f45fc94791715153e314e5da4))
+
 ## [1.3.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.2.0...1.3.0) (2026-07-15)
 
 ### Features
