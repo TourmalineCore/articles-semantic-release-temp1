@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.2.0...1.3.0) (2026-07-15)
+
+### Features
+
+* add cookBananaCake function ([804cfc0](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/804cfc0266d40b008e34cad9761802e960987900))
+* add cookBananaCake function ([40b0f9c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/40b0f9c3ea1c2548f156cacc97191f7f035f300d))
+
 ## [1.2.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/v1.1.0...1.2.0) (2026-07-15)
 
 ### Features
