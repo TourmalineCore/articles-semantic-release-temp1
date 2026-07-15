@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/v1.1.0...1.2.0) (2026-07-15)
+
+### Features
+
+* some change ([6717f8d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/6717f8d9a244f4c354bdcce02cf539a8c4389740))
+
 ## [1.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/v1.0.0...v1.1.0) (2026-07-15)
 
 ### Features
