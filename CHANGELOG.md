@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/v1.0.0...v1.1.0) (2026-07-15)
+
+### Features
+
+* update release.config.js ([6d12e11](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/6d12e112cd387cdd85bd2295d4cd6b0f5f59aa40))
+
 ## 1.0.0 (2026-07-15)
 
 ### Features
