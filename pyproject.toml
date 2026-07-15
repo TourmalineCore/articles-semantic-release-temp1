@@ -1,9 +1,9 @@
 [project]
-name = "tourmalinecore-articles-semantic-release-temp1"
+name = "hdg4fsd3-test-project"
 version = "1.0.0"
 description = ""
 authors = [
-    {name = "tourmalinecore"}
+    {name = "publisher"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"
