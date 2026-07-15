@@ -2,13 +2,14 @@ const { RELEASE_RULES, CHANGELOG_TYPES } = require('./release.rules.cjs');
 
 module.exports = {
     // You can find out more about the configuration of this file here https://semantic-release.gitbook.io/semantic-release/usage/configuration
-    branches: [
+    "branches": [
         { "name": 'master' },
         { "name": 'release/*', "prerelease": 'rc' },
         { "name": 'develop', "prerelease": 'alpha' },
     ],
+    "tagFormat": '${version}',
     // Plugins https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
-    plugins: [
+    "plugins": [
         [
             // Analyzes commits and determines which release version should be released.
             '@semantic-release/commit-analyzer',
