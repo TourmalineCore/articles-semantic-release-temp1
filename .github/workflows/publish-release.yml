@@ -25,6 +25,8 @@ jobs:
         with:
           ref: ${{ github.ref_name }}
           fetch-depth: 0
+          fetch-tags: true
+          token: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN }}
 
       - name: Force release branch to be at workflow sha
         run: |
@@ -66,6 +68,18 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24.18.0
+      
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.14"
+
+      - name: Install Poetry
+        uses: snok/install-poetry@v1
+        with:
+          version: '2.4.1'
+          virtualenvs-create: true
+          virtualenvs-in-project: true
 
       - name: Install semantic-release and plugins
         run: |
