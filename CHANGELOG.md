@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0-alpha.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.2.0-alpha.1...1.2.0-alpha.2) (2026-07-17)
+
+### Bug Fixes
+
+* add input type of number handler ([#41](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/41)) ([f68300c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/f68300cc81eae219f9a57b4bdcb7f23c523b9cda))
+
 ## [1.2.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.1.1-alpha.1...1.2.0-alpha.1) (2026-07-17)
 
 ### Features
