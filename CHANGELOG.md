@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.0.0...1.1.0) (2026-07-17)
+
+### Features
+
+* add multiple function ([#35](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/35)) ([0a6620d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0a6620d5179db161048998ce6318433620c4b295))
+
+### Documentation
+
+* **release:** update changelog ([6f24ebb](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/6f24ebb2c95d479a87eae20df54ddfa0777c07c2))
+* **release:** update changelog ([a6fe0f4](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/a6fe0f4d3635c3fb0f4ee1e6cfa8de41e9a8236b))
+
+## [1.1.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.0.0...1.1.0-rc.1) (2026-07-17)
+
+### Features
+
+* add multiple function ([#35](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/35)) ([0a6620d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0a6620d5179db161048998ce6318433620c4b295))
+
+### Documentation
+
+* **release:** update changelog ([a6fe0f4](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/a6fe0f4d3635c3fb0f4ee1e6cfa8de41e9a8236b))
+
 ## [1.1.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.0.0...1.1.0-alpha.1) (2026-07-17)
 
 ### Features
