@@ -10,6 +10,9 @@ def sum(a: int, b: int) -> int:
 def input_number_from_console_and_return_it() -> int:
     number = input("Write number: ")
 
+    if type(number) != int:
+        raise ValueError("Incorrect input type")
+
     return number
 
 def main() -> None:
