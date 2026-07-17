@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.1-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.1.0...1.1.1-alpha.1) (2026-07-17)
+
+### Documentation
+
+* update readme ([#39](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/39)) ([139a9ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/139a9ed9d065fd7838518d554e7a3a456380ef32))
+
 ## [1.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.0.0...1.1.0) (2026-07-17)
 
 ### Features
