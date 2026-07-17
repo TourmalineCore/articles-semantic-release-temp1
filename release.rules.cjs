@@ -4,6 +4,7 @@ const RELEASE_RULES = [
     { "type": 'docs', "release": 'patch' },
     { "type": 'refactor', "release": 'patch' },
     { "type": 'chore', "release": false },
+    { "type": 'chore', "release": false },
     { "type": 'ci', "release": false },
     { "type": 'style', "release": false },
     { "type": 'test', "release": false },
