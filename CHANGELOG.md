@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.1.1-alpha.1...1.2.0-alpha.1) (2026-07-17)
+
+### Features
+
+* add input number from console function ([#40](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/40)) ([e001526](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/e00152699eb061002093a4240b72656da07c8239)), closes [#33](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/33)
+
 ## [1.1.1-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.1.0...1.1.1-alpha.1) (2026-07-17)
 
 ### Documentation
