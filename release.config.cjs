@@ -37,6 +37,13 @@ module.exports = {
             },
         ],
         [
+            // Bumping version in pyproject.toml and build .whl
+            '@semantic-release/exec', 
+            {
+                "prepareCmd": 'poetry version ${nextRelease.version} && poetry build',
+            }
+        ],
+        [
             // Plugin for commits changes
             '@semantic-release/git',
             {
