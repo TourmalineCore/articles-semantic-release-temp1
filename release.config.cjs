@@ -32,7 +32,7 @@ module.exports = {
             // Writing release notes to a changelog
             '@semantic-release/changelog',
             { 
-                "changelogTitle": "Changelog",
+                "changelogTitle": "# Changelog",
                 "changelogFile": 'CHANGELOG.md' 
             },
         ],
