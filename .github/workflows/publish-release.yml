@@ -1,0 +1,90 @@
+name: Create and Publish Release 
+
+on:
+  push:
+    branches:
+      - master
+      - 'release/*'
+      - develop
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Create and Publish Release
+    runs-on: ubuntu-24.04
+
+    concurrency:
+      group: ${{ github.workflow }}-release-${{ github.ref_name }}
+      cancel-in-progress: false
+
+    steps:
+      - name: Checkout Repository on Release Branch
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+          fetch-tags: true
+          token: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN }}
+
+      - name: Force release branch to be at workflow sha
+        run: |
+          git reset --hard ${{ github.sha }}
+
+      - name: Verify upstream has NOT changed
+        shell: bash
+        run: |
+          set +o pipefail
+
+          UPSTREAM_BRANCH_NAME="$(git status -sb | head -n 1 | awk -F '\\.\\.\\.' '{print $2}' | cut -d ' ' -f1)"
+          printf '%s\n' "Upstream branch name: $UPSTREAM_BRANCH_NAME"
+
+          set -o pipefail
+
+          if [ -z "$UPSTREAM_BRANCH_NAME" ]; then
+              printf >&2 '%s\n' "::error::Unable to determine upstream branch name!"
+              exit 1
+          fi
+
+          git fetch "${UPSTREAM_BRANCH_NAME%%/*}"
+
+          if ! UPSTREAM_SHA="$(git rev-parse "$UPSTREAM_BRANCH_NAME")"; then
+              printf >&2 '%s\n' "::error::Unable to determine upstream branch sha!"
+              exit 1
+          fi
+
+          HEAD_SHA="$(git rev-parse HEAD)"
+
+          if [ "$HEAD_SHA" != "$UPSTREAM_SHA" ]; then
+              printf >&2 '%s\n' "[HEAD SHA] $HEAD_SHA != $UPSTREAM_SHA [UPSTREAM SHA]"
+              printf >&2 '%s\n' "::error::Upstream has changed, aborting release..."
+              exit 1
+          fi
+
+          printf '%s\n' "Verified upstream branch has not changed, continuing with release..."
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.18.0
+
+      - name: Install semantic-release and plugins
+        run: |
+          # TODO: Check versions
+          npm install \
+            semantic-release@25.0.7 \
+            @semantic-release/changelog@6.0.3 \
+            @semantic-release/exec \
+            @semantic-release/git@10.0.1 \
+            conventional-changelog-conventionalcommits@10.2.1
+
+      - name: Semantic Version Release
+        env:
+          # this token should have at lease these permissions:
+          #   contents: write # to be able to publish a GitHub release
+          #   issues: write # to be able to comment on released issues
+          #   pull-requests: write # to be able to comment on released pull requests
+          GH_TOKEN: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN   }}
+        run: |
+          npx semantic-release
