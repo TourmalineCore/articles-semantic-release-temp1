@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.0.0...1.1.0-alpha.1) (2026-07-17)
+
+### Features
+
+* add multiple function ([#35](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/35)) ([0a6620d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0a6620d5179db161048998ce6318433620c4b295))
+
 ## 1.0.0 (2026-07-17)
 
 ### Features
