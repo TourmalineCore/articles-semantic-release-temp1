@@ -3,7 +3,6 @@ const RELEASE_RULES = [
     { "type": 'fix', "release": 'patch' },
     { "type": 'docs', "release": 'patch' },
     { "type": 'refactor', "release": 'patch' },
-    { "type": 'docs', "scope": "release", "release": false },
     { "type": 'chore', "release": false },
     { "type": 'ci', "release": false },
     { "type": 'style', "release": false },
