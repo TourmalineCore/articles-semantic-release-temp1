@@ -1,3 +1,6 @@
+def sub(a: int, b: int) -> int:
+    return b - a
+
 def sum(a: int, b: int) -> int:
     return a + b
 
