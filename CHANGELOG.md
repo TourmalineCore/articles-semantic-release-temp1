@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.2.0-alpha.4](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.2.0-alpha.3...1.2.0-alpha.4) (2026-07-20)
+
+### Features
+
+* test commit ([#46](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/46)) ([916bf47](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/916bf47b8cb880733329705fe152affe3f0a9c42)), closes [#33](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/33)
+
 ## [1.2.0-alpha.3](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.2.0-alpha.2...1.2.0-alpha.3) (2026-07-17)
 
 ### Features
