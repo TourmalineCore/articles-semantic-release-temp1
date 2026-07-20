@@ -6,6 +6,9 @@ on:
       - master
       - 'release/*'
       - develop
+    # paths-ignore:
+    #   - 'CHANGELOG.md'
+    #   - 'pyproject.toml'
 
 permissions:
   contents: write

@@ -1,5 +1,54 @@
 # Changelog
 
+## [1.2.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.1.0...1.2.0-rc.1) (2026-07-20)
+
+### Features
+
+* add input number from console function ([#40](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/40)) ([e001526](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/e00152699eb061002093a4240b72656da07c8239)), closes [#33](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/33)
+* test commit ([#43](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/43)) ([5afd893](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/5afd893aec91d39be81a2328636d61ec024555ba))
+* test commit ([#46](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/46)) ([916bf47](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/916bf47b8cb880733329705fe152affe3f0a9c42)), closes [#33](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/33)
+
+### Bug Fixes
+
+* add input type of number handler ([#41](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/41)) ([f68300c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/f68300cc81eae219f9a57b4bdcb7f23c523b9cda))
+
+### Documentation
+
+* **release:** update changelog ([0b40f12](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0b40f121eb41220e14d1e58e49cf4d991f01726b))
+* **release:** update changelog ([36ecc12](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/36ecc1204442ec7b13e81cc87ed5c34d04d0f174))
+* **release:** update changelog ([5bb928f](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/5bb928f5f1edb6479bd503b40b39d5c8e929ad7d))
+* update readme ([#39](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/39)) ([139a9ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/139a9ed9d065fd7838518d554e7a3a456380ef32))
+
+## [1.2.0-alpha.4](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.2.0-alpha.3...1.2.0-alpha.4) (2026-07-20)
+
+### Features
+
+* test commit ([#46](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/46)) ([916bf47](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/916bf47b8cb880733329705fe152affe3f0a9c42)), closes [#33](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/33)
+
+## [1.2.0-alpha.3](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.2.0-alpha.2...1.2.0-alpha.3) (2026-07-17)
+
+### Features
+
+* test commit ([#43](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/43)) ([5afd893](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/5afd893aec91d39be81a2328636d61ec024555ba))
+
+## [1.2.0-alpha.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.2.0-alpha.1...1.2.0-alpha.2) (2026-07-17)
+
+### Bug Fixes
+
+* add input type of number handler ([#41](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/41)) ([f68300c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/f68300cc81eae219f9a57b4bdcb7f23c523b9cda))
+
+## [1.2.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.1.1-alpha.1...1.2.0-alpha.1) (2026-07-17)
+
+### Features
+
+* add input number from console function ([#40](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/40)) ([e001526](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/e00152699eb061002093a4240b72656da07c8239)), closes [#33](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/33)
+
+## [1.1.1-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.1.0...1.1.1-alpha.1) (2026-07-17)
+
+### Documentation
+
+* update readme ([#39](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/39)) ([139a9ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/139a9ed9d065fd7838518d554e7a3a456380ef32))
+
 ## [1.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.0.0...1.1.0) (2026-07-17)
 
 ### Features

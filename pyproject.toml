@@ -1,6 +1,6 @@
 [project]
 name = "gsh8lsl5-test-package"
-version = "1.1.0"
+version = "1.2.0rc1"
 description = ""
 authors = [
     {name = "publisher"}
