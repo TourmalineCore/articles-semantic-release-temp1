@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.5.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.4.0...1.5.0-rc.1) (2026-07-21)
+
+### Features
+
+* [#33](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/33) remove skip ci ([#55](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/55)) ([51dd17f](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/51dd17f93c49ac857ba3d62f9477156fec2661e7))
+
 ## [1.5.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.4.0...1.5.0-alpha.1) (2026-07-21)
 
 ### Features
