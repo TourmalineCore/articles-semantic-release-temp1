@@ -51,7 +51,7 @@ jobs:
           VERSION="${LAST_STABLE_TAG}.dev${DEV_NUM}"
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
           poetry version "${VERSION}"
-      
+
       - name: Show version with development metadata
         if: github.event_name == 'push'
         run: |
