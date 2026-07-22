@@ -45,7 +45,7 @@ jobs:
           virtualenvs-in-project: true
       
       - name: Generate and setup version with development metadata
-        id: generate_feature_release_version
+        id: generate_version_with_development_metadata
         if: env.NEED_DEV_VERSION_POSTFIX == 'true'
         run: |
           SHORT_SHA=$(git rev-parse --short=8 HEAD)
@@ -58,7 +58,7 @@ jobs:
       - name: Show version with development metadata
         if: env.NEED_DEV_VERSION_POSTFIX == 'true'
         run: |
-          echo "Version: ${{ steps.generate_feature_release_version.outputs.VERSION }}"
+          echo "Version: ${{ steps.generate_version_with_development_metadata.outputs.VERSION }}"
 
       - name: Build the Package        
         run: |
