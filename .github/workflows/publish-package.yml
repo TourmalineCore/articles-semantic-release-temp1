@@ -12,6 +12,9 @@ concurrency:
   group: publishing-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
+env:
+  NEED_DEV_VERSION_POSTFIX: ${{ startsWith(github.ref_name, 'feature/') || startsWith(github.ref_name, 'release/') }}
+
 jobs:
   release-build:
     name: Build package
@@ -43,17 +46,17 @@ jobs:
       
       - name: Generate and setup version with development metadata
         id: generate_feature_release_version
-        if: github.event_name == 'push'
+        if: env.NEED_DEV_VERSION_POSTFIX == 'true'
         run: |
           SHORT_SHA=$(git rev-parse --short=8 HEAD)
           DEV_NUM=$((16#$SHORT_SHA))
-          LAST_TAG=$(poetry version -s | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+')
-          VERSION="${LAST_TAG}.dev${DEV_NUM}"
-          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+          CURRENT_VERSION=$(poetry version -s)
+          VERSION="${CURRENT_VERSION}.dev${DEV_NUM}"
           poetry version "${VERSION}"
+          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
 
       - name: Show version with development metadata
-        if: github.event_name == 'push'
+        if: env.NEED_DEV_VERSION_POSTFIX == 'true'
         run: |
           echo "Version: ${{ steps.generate_feature_release_version.outputs.VERSION }}"
 
