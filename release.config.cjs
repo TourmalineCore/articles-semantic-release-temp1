@@ -10,9 +10,8 @@ module.exports = {
         { "name": 'release/*', "prerelease": 'rc' },
         { "name": 'develop', "prerelease": 'alpha' },
     ],
-    "tagFormat": '${version}' + DEV_SUFFIX,
-    // "tagFormat": 'v${version}',
-    // "tagFormat": '${version}',
+    // "tagFormat": '${version}' + DEV_SUFFIX,
+    "tagFormat": '${version}',
     // Plugins https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
     "plugins": [
         [
@@ -46,7 +45,7 @@ module.exports = {
             // Bumping version in pyproject.toml and build .whl
             '@semantic-release/exec', 
             {
-                "prepareCmd": 'echo "${nextRelease.version}" && poetry version ${nextRelease.version} && poetry build',
+                "prepareCmd": 'poetry version ${nextRelease.version} && poetry build',
             }
         ],
         [
