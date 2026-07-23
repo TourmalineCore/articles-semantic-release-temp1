@@ -53,7 +53,6 @@ jobs:
       - name: Generate and setup version with development metadata
         id: compute_dev_version
         if: env.NEED_DEV_VERSION_POSTFIX == 'true'
-        if: ${{ github.event_name == 'push' }}
         run: |
           SHORT_SHA=$(git rev-parse --short=8 HEAD)
           DEV_NUM=$((16#$SHORT_SHA))
