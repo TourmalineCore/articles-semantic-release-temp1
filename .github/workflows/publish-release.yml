@@ -6,9 +6,15 @@ on:
       - master
       - 'release/*'
       - develop
+    # paths-ignore:
+    #   - 'CHANGELOG.md'
+    #   - 'pyproject.toml'
 
 permissions:
   contents: write
+
+env:
+  NEED_DEV_VERSION_POSTFIX: ${{ startsWith(github.ref_name, 'release/') }}
 
 jobs:
   release:
@@ -92,6 +98,14 @@ jobs:
             @semantic-release/git@10.0.1 \
             @semantic-release/github@12.0.8 \
             conventional-changelog-conventionalcommits@9.3.1
+      
+      - name: Compute dev version metadata
+        id: compute_dev_version
+        if: startsWith(github.ref_name, 'release/')
+        run: |
+          SHORT_SHA=$(git rev-parse --short=8 HEAD)
+          DEV_NUM=$((16#$SHORT_SHA))
+          echo "dev_num=${DEV_NUM}" >> "$GITHUB_OUTPUT"
 
       - name: Semantic Version Release
         env:
@@ -100,5 +114,6 @@ jobs:
           #   issues: write # to be able to comment on released issues
           #   pull-requests: write # to be able to comment on released pull requests
           GH_TOKEN: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN   }}
+          DEV_NUM: ${{ steps.compute_dev_version.outputs.dev_num }}
         run: |
           npx semantic-release

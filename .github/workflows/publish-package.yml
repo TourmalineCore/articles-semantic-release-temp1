@@ -12,6 +12,9 @@ concurrency:
   group: publishing-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
 
+env:
+  NEED_DEV_VERSION_POSTFIX: ${{ startsWith(github.ref_name, 'feature/') || startsWith(github.ref_name, 'release/') }}
+
 jobs:
   release-build:
     name: Build package
@@ -42,28 +45,24 @@ jobs:
           virtualenvs-in-project: true
       
       - name: Generate and setup version with development metadata
-        id: generate_feature_release_version
-        if: github.event_name == 'push'
+        id: compute_dev_version
+        if: env.NEED_DEV_VERSION_POSTFIX == 'true'
         run: |
           SHORT_SHA=$(git rev-parse --short=8 HEAD)
           DEV_NUM=$((16#$SHORT_SHA))
-          LAST_STABLE_TAG=$(git describe --tags --abbrev=0 origin/master 2>/dev/null || echo "1.0.0")
-          VERSION="${LAST_STABLE_TAG}.dev${DEV_NUM}"
-          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+          CURRENT_VERSION=$(poetry version -s)
+          VERSION="${CURRENT_VERSION}.dev${DEV_NUM}"
           poetry version "${VERSION}"
-      
+          echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
+
       - name: Show version with development metadata
-        if: github.event_name == 'push'
+        if: env.NEED_DEV_VERSION_POSTFIX == 'true'
         run: |
-          echo "Version: ${{ steps.generate_feature_release_version.outputs.VERSION }}"
+          echo "Version: ${{ steps.compute_dev_version.outputs.VERSION }}"
 
       - name: Build the Package        
         run: |
           poetry build
-
-      # TODO: Add step wheel build verification (Run example_app test for example)
-      # - name: Verify that build is correct
-      #   run: smth
 
       - name: Upload dists
         uses: actions/upload-artifact@v7
