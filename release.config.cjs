@@ -46,7 +46,7 @@ module.exports = {
             // Bumping version in pyproject.toml and build .whl
             '@semantic-release/exec', 
             {
-                "prepareCmd": 'poetry version ${nextRelease.version} && poetry build',
+                "prepareCmd": 'echo "${nextRelease.version}" && poetry version ${nextRelease.version} && poetry build',
             }
         ],
         [
