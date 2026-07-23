@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.0-alpha.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.0.0-alpha.1...1.0.0-alpha.2) (2026-07-23)
+
+### Features
+
+* test commit ([31fc5ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/31fc5ed91c6ad116c5486c8ac71c90603383504e))
+
 ## 1.0.0-alpha.1 (2026-07-23)
 
 ### Features
