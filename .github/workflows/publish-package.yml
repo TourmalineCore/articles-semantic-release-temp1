@@ -45,7 +45,7 @@ jobs:
           virtualenvs-in-project: true
       
       - name: Show environment variable value
-        run: echo "Value is ${{ env.WORKFLOW_VAR }}"
+        run: echo "Value is ${{ env.NEED_DEV_VERSION_POSTFIX }}"
       
       - name: Generate and setup version with development metadata
         id: compute_dev_version
