@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.0-rc.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/1.0.0-rc.1...1.0.0-rc.2) (2026-07-24)
+
+### Features
+
+* add missing permission ([fdcfc3a](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/fdcfc3a543a35f6efd618e25954ab99ebae8e4b6))
+* update release configuration ([e3167e5](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/e3167e5aa597567e66f396007fb3c0561875a621))
+
 ## 1.0.0-rc.1 (2026-07-24)
 
 ### Features
