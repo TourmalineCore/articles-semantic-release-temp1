@@ -1,6 +1,6 @@
 [project]
 name = "jsh4lsk5-test-package"
-version = "1.0.0rc2"
+version = "1.0.0rc3"
 description = ""
 authors = [
     {name = "publisher"}
