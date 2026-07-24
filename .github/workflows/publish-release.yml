@@ -9,6 +9,9 @@ on:
 
 permissions:
   contents: write
+  # This permission is required for this workflow; 
+  # otherwise, the called workflow will not have it.
+  id-token: write
 
 jobs:
   publish_release:
@@ -111,6 +114,7 @@ jobs:
           npx semantic-release
   
   call_publish_package:
+    name: Call publish package workflow
     needs: publish_release
     # Trigger the publish package workflow only 
     # if a new release has actually been released
