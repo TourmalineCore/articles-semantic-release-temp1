@@ -6,20 +6,16 @@ on:
       - master
       - 'release/*'
       - develop
-    # paths-ignore:
-    #   - 'CHANGELOG.md'
-    #   - 'pyproject.toml'
 
 permissions:
   contents: write
 
-env:
-  NEED_DEV_VERSION_POSTFIX: ${{ startsWith(github.ref_name, 'release/') }}
-
 jobs:
-  release:
+  publish_release:
     name: Create and Publish Release
     runs-on: ubuntu-24.04
+    outputs:
+      released: ${{ steps.semantic_version_release.outputs.released }}
 
     concurrency:
       group: ${{ github.workflow }}-release-${{ github.ref_name }}
@@ -98,16 +94,9 @@ jobs:
             @semantic-release/git@10.0.1 \
             @semantic-release/github@12.0.8 \
             conventional-changelog-conventionalcommits@9.3.1
-      
-      - name: Compute dev version metadata
-        id: compute_dev_version
-        if: startsWith(github.ref_name, 'release/')
-        run: |
-          SHORT_SHA=$(git rev-parse --short=8 HEAD)
-          DEV_NUM=$((16#$SHORT_SHA))
-          echo "dev_num=${DEV_NUM}" >> "$GITHUB_OUTPUT"
 
       - name: Semantic Version Release
+        id: semantic_version_release
         env:
           # this token should have at lease these permissions:
           #   contents: write # to be able to publish a GitHub release
@@ -116,4 +105,18 @@ jobs:
           GH_TOKEN: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN   }}
           DEV_NUM: ${{ steps.compute_dev_version.outputs.dev_num }}
         run: |
+          # Setting the default value: if a new release is published, 
+          # `semantic-release` will set the `released` variable to `true`
+          echo "released=false" >> "$GITHUB_OUTPUT"
           npx semantic-release
+  
+  call_publish_package:
+    needs: publish_release
+    # Trigger the publish package workflow only 
+    # if a new release has actually been released
+    if: needs.publish_release.outputs.released == 'true'
+    uses: ./.github/workflows/publish-package.yml
+    with:
+      # Since the workflow is triggered by a release, it doesn`t 
+      # have access to the name of the branch from which it was launched
+      branch_name: ${{ github.ref_name }}

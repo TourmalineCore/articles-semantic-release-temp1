@@ -46,6 +46,9 @@ module.exports = {
             '@semantic-release/exec', 
             {
                 "prepareCmd": 'poetry version ${nextRelease.version} && poetry build',
+                // The entry below helps determine whether a new release was published 
+                // or not during the execution of the release workflow.
+                "successCmd": 'echo "released=true" >> $GITHUB_OUTPUT'
             }
         ],
         [

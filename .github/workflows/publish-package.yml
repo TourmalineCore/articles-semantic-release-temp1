@@ -1,20 +1,22 @@
 name: Package Publishing
 
 on:
-  release:
-    types:
-      - published
   push:
     branches:
       - 'feature/*'
+  workflow_call:
+    inputs:
+      # The thread title is needed to determine 
+      # when to set the .dev postfix in the package version
+      branch_name:
+        description: "The name of the branch from which the workflow was triggered"
+        type: string
+        required: true
 
 concurrency:
   group: publishing-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: false
-
-env:
-  NEED_DEV_VERSION_POSTFIX: ${{ startsWith(github.ref_name, 'feature/') || startsWith(github.ref_name, 'release/') }}
-
+  
 jobs:
   release-build:
     name: Build package
@@ -50,9 +52,9 @@ jobs:
           echo "github.ref_name is ${{ github.ref_name }}"
           echo "env.NEED_DEV_VERSION_POSTFIX is ${{ env.NEED_DEV_VERSION_POSTFIX }}"
       
-      - name: Generate and setup version with development metadata
+      - name: Generate and setup version with .dev postfix
         id: compute_dev_version
-        if: env.NEED_DEV_VERSION_POSTFIX == 'true'
+        if: github.event_name == 'push' || startsWith(inputs.branch_name, 'release/')
         run: |
           SHORT_SHA=$(git rev-parse --short=8 HEAD)
           DEV_NUM=$((16#$SHORT_SHA))
@@ -61,10 +63,9 @@ jobs:
           poetry version "${VERSION}"
           echo "VERSION=${VERSION}" >> $GITHUB_OUTPUT
 
-      - name: Show version with development metadata
-        if: env.NEED_DEV_VERSION_POSTFIX == 'true'
+      - name: Show released version of the package
         run: |
-          echo "Version: ${{ steps.compute_dev_version.outputs.VERSION }}"
+          echo "Released version of the package is ${{ steps.compute_dev_version.outputs.VERSION }}"
 
       - name: Build the Package        
         run: |
