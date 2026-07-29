@@ -30,6 +30,14 @@
 
 * [#5](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/5) ([#66](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/66)) ([3b27777](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/3b277771c45a78a086b678151cba8652782e1276))
 * [#7](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/7) ([2d32119](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/2d3211931dddf465729d3de68ca4dcb5a91a8cd2))
+* [#8](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/8) ([e61943d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/e61943db800ed47d341ac8612cc22381088de17b))
+
+## [2.1.0-1.x-develop.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/2.0.0...2.1.0-1.x-develop.1) (2026-07-29)
+
+### Features
+
+* [#5](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/5) ([#66](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/66)) ([3b27777](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/3b277771c45a78a086b678151cba8652782e1276))
+* [#7](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/7) ([2d32119](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/2d3211931dddf465729d3de68ca4dcb5a91a8cd2))
 
 ## [2.1.0-1.x-develop.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/2.0.0...2.1.0-1.x-develop.1) (2026-07-29)
 
