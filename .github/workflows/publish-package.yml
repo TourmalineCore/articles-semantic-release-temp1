@@ -3,7 +3,7 @@ name: Package Publishing
 on:
   push:
     branches:
-      - 'feature/*'
+      - '*/feature/*'
   workflow_call:
     inputs:
       # The thread title is needed to determine 
