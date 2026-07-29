@@ -1,5 +1,25 @@
 # Changelog
 
+## [4.0.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/3.1.0...4.0.0-rc.1) (2026-07-29)
+
+### ⚠ BREAKING CHANGES
+
+* #14
+
+### Features
+
+* [#14](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/14) ([41e7ad1](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/41e7ad12964ec991b9377ea99edd7b2ad00a2973))
+
+## [4.0.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/3.1.0...4.0.0-alpha.1) (2026-07-29)
+
+### ⚠ BREAKING CHANGES
+
+* #14
+
+### Features
+
+* [#14](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/14) ([41e7ad1](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/41e7ad12964ec991b9377ea99edd7b2ad00a2973))
+
 ## [3.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/3.0.0...3.1.0) (2026-07-29)
 
 ### Features
