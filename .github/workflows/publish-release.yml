@@ -3,9 +3,12 @@ name: Create and Publish Release
 on:
   push:
     branches:
-      - master
+      - 'master'
       - 'release/*'
       - develop
+      - '*/master'
+      - '*/release/*'
+      - '*/develop'
 
 permissions:
   contents: write
