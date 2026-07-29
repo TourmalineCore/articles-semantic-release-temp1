@@ -64,7 +64,7 @@ module.exports = {
             // Bumping version in pyproject.toml and build .whl
             '@semantic-release/exec', 
             {
-                "prepareCmd": 'poetry version ${env.PEP440_VERSION} && poetry build',
+                "prepareCmd": 'poetry version "$PEP440_VERSION" && poetry build',
                 // The entry below helps determine whether a new release was published 
                 // or not during the execution of the release workflow.
                 "successCmd": 'echo "released=true" >> $GITHUB_OUTPUT'
