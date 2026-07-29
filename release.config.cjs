@@ -23,7 +23,7 @@ module.exports = {
         { "name": 'release/*', "prerelease": 'rc' },
         { "name": 'develop', "prerelease": 'alpha' },
         { "name": '*/master', "range": '${name.match(/^(\\d+)\\.x/)[1]}.x' },
-        { "name": '{*/develop,*/release/*}', "prerelease": '${name.replace(/\\//g, "-")}' }
+        { "name": '{*/develop,*/release/*}', "prerelease": '${name.replace(/[^a-zA-Z0-9]+/g, "-")}' }
     ],
     "tagFormat": '${version}',
     // Plugins https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
