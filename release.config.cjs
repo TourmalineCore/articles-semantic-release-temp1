@@ -5,8 +5,8 @@ module.exports = {
     "branches": [
         { "name": '1.x/master', "range": '1.x' }, 
         { "name": 'master' }, 
-        { "name": '{release/*,*/release/*}', "prerelease": 'rc' },
-        { "name": '{develop,*/develop}', "prerelease": 'alpha' },
+        { "name": '{release/*,*/release/*}', "prerelease": '${name.replace(/\\//g, "-")}' },
+        { "name": '{develop,*/develop}', "prerelease": '${name.replace(/\\//g, "-")}' },
     ],
     "tagFormat": '${version}',
     // Plugins https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
