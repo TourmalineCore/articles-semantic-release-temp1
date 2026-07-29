@@ -1,27 +1,31 @@
 const { RELEASE_RULES, CHANGELOG_TYPES } = require('./release.rules.cjs');
 
-// function toPep440(version) {
-//     const [base, ...rest] = version.split('-');
+function toPep440(version) {
+    const [base, ...rest] = version.split('-');
 
-//     if (rest.length === 0)
-//         return version;
+    if (rest.length === 0)
+        return version;
 
-//     const identifier = rest.join('-');
-//     if (/^[A-Za-z]+\.\d+$/.test(identifier)) 
-//         return version;
+    const identifier = rest.join('-');
+    const match = identifier.match(/^\d+x-(alpha|rc)\.(\d+)$/);
 
-//     const num = identifier.split('.').pop();
-//     const phase = identifier.includes('develop') ? 'alpha' : 'rc';
+    if (!match)
+        return version;
 
-//     return `${base}-${phase}.${num}`;
-// }
+    const [, phase, num] = match;
+
+    return `${base}-${phase}.${num}`;
+}
 
 module.exports = {
     // You can find out more about the configuration of this file here https://semantic-release.gitbook.io/semantic-release/usage/configuration
     "branches": [
-        { "name": '{*/master,master}' }, 
-        { "name": '{*/release/*,release/*}', "prerelease": 'rc' },
-        { "name": '{*/develop,develop}', "prerelease": 'alpha' },
+        { "name": 'master' },
+        { "name": 'release/*', "prerelease": 'rc' },
+        { "name": 'develop', "prerelease": 'alpha' },
+        { "name": '+([0-9]).x/master', "range": '${name.match(/^(\\d+)\\.x/)[1]}.x' },
+        { "name": '+([0-9]).x/release/*', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-rc' },
+        { "name": '+([0-9]).x/develop', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-alpha' },
     ],
     "tagFormat": '${version}',
     // Plugins https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
@@ -52,17 +56,16 @@ module.exports = {
                 "changelogFile": 'CHANGELOG.md' 
             },
         ],
-        // {
-        //     prepare: async (pluginConfig, context) => {
-        //         process.env.PEP440_VERSION = toPep440(context.nextRelease.version);
-        //     },
-        // },
+        {
+            prepare: async (pluginConfig, context) => {
+                process.env.PEP440_VERSION = toPep440(context.nextRelease.version);
+            },
+        },
         [
             // Bumping version in pyproject.toml and build .whl
-            '@semantic-release/exec', 
+            '@semantic-release/exec',
             {
-                // "prepareCmd": 'poetry version "$PEP440_VERSION" && poetry build',
-                "prepareCmd": 'poetry version ${nextRelease.version} && poetry build',
+                "prepareCmd": 'poetry version "$PEP440_VERSION" && poetry build',
                 // The entry below helps determine whether a new release was published 
                 // or not during the execution of the release workflow.
                 "successCmd": 'echo "released=true" >> $GITHUB_OUTPUT'
