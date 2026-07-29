@@ -1,4 +1,5 @@
 const RELEASE_RULES = [
+    { "breaking": true, "release": 'major' },
     { "type": 'feat', "release": 'minor' },
     { "type": 'fix', "release": 'patch' },
     { "type": 'docs', "release": 'patch' },
