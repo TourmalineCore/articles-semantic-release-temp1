@@ -1,5 +1,15 @@
 # Changelog
 
+## [6.0.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/5.2.0-alpha.2...6.0.0-alpha.1) (2026-07-30)
+
+### ⚠ BREAKING CHANGES
+
+* #10
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([1e4bf03](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/1e4bf0351fd3bd7fbe1590b29c5d3940256d2660))
+
 ## [5.2.0-alpha.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/5.2.0-alpha.1...5.2.0-alpha.2) (2026-07-30)
 
 ### Bug Fixes
