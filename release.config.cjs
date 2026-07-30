@@ -1,22 +1,5 @@
 const { RELEASE_RULES, CHANGELOG_TYPES } = require('./release.rules.cjs');
 
-function toPep440(version) {
-    const [base, ...rest] = version.split('-');
-
-    if (rest.length === 0)
-        return version;
-
-    const identifier = rest.join('-');
-    const match = identifier.match(/^\d+x-(alpha|rc)\.(\d+)$/);
-
-    if (!match)
-        return version;
-
-    const [, phase, num] = match;
-
-    return `${base}-${phase}.${num}`;
-}
-
 module.exports = {
     // You can find out more about the configuration of this file here https://semantic-release.gitbook.io/semantic-release/usage/configuration
     "branches": [
@@ -26,6 +9,7 @@ module.exports = {
         { "name": 'develop', "prerelease": 'alpha' },
         { "name": '+([0-9]).x/master', "range": '${name.match(/^(\\d+)\\.x/)[1]}.x' },
         { "name": '+([0-9]).x/release/*', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-rc' },
+        { "name": '+([0-9]).x/hotfix/*', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-holfix' },
         { "name": '+([0-9]).x/develop', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-alpha' },
     ],
     "tagFormat": '${version}',
@@ -90,3 +74,28 @@ module.exports = {
         ],
     ],
 };
+
+function toPep440(version) {
+    const [base, ...rest] = version.split('-');
+
+    if (rest.length === 0)
+        return version;
+
+    const identifier = rest.join('-');
+
+    const hotfixMatch = identifier.match(/^hotfix\.(\d+)$/);
+    if (hotfixMatch) {
+        const [, num] = hotfixMatch;
+        return `${base}-rc.${num}`;
+    }
+
+    const match = identifier.match(/^\d+x-(alpha|rc|hotfix)\.(\d+)$/);
+
+    if (!match)
+        return version;
+
+    const [, phase, num] = match;
+    const normalizedPhase = phase === 'hotfix' ? 'rc' : phase;
+
+    return `${base}-${normalizedPhase}.${num}`;
+}
