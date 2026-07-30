@@ -5,10 +5,13 @@ on:
     branches:
       - 'master'
       - 'release/*'
+      - 'hotfix/*'
       - develop
       - '*/master'
       - '*/release/*'
+      - '*/hotfix/*'
       - '*/develop'
+  workflow_dispatch:
 
 permissions:
   contents: write
