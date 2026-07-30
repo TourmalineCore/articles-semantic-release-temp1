@@ -1,5 +1,15 @@
 # Changelog
 
+## [8.0.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/7.0.0...8.0.0) (2026-07-30)
+
+### ⚠ BREAKING CHANGES
+
+* #10
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([4f02751](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/4f02751aeecc04dae86698964ab17eac63e5ebbb))
+
 ## [7.0.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.1.1...7.0.0) (2026-07-30)
 
 ### ⚠ BREAKING CHANGES
