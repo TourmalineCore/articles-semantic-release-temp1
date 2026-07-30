@@ -11,6 +11,7 @@ on:
       - '*/release/*'
       - '*/hotfix/*'
       - '*/develop'
+  workflow_dispatch:
 
 permissions:
   contents: write
