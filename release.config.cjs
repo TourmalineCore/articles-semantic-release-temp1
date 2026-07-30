@@ -22,6 +22,7 @@ module.exports = {
     "branches": [
         { "name": 'master' },
         { "name": 'release/*', "prerelease": 'rc' },
+        { "name": 'hotfix/*', "prerelease": 'hotfix' },
         { "name": 'develop', "prerelease": 'alpha' },
         { "name": '+([0-9]).x/master', "range": '${name.match(/^(\\d+)\\.x/)[1]}.x' },
         { "name": '+([0-9]).x/release/*', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-rc' },

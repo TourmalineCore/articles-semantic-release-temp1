@@ -5,9 +5,11 @@ on:
     branches:
       - 'master'
       - 'release/*'
+      - 'hotfix/*'
       - develop
       - '*/master'
       - '*/release/*'
+      - '*/hotfix/*'
       - '*/develop'
 
 permissions:
