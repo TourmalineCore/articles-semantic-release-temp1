@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.1.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/5.1.1...5.1.2) (2026-07-30)
+
+### Bug Fixes
+
+* [#3](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/3) ([5bb5644](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/5bb56444e41f2bc5413fc24ada5cd784a8a0dcf2))
+
 ## [5.1.2-hotfix.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/5.1.1...5.1.2-hotfix.1) (2026-07-30)
 
 ### Bug Fixes
