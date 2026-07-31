@@ -1,5 +1,12 @@
 # Changelog
 
+## [8.7.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.6.0...8.7.0-rc.1) (2026-07-31)
+
+### Features
+
+* test commit ([7b4b312](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/7b4b3120f898d1366358f5d9fcc4ce4dce017fc0))
+* test commit ([29c349d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/29c349d133e65d06ba7503f02894f9f82463ff6a))
+
 ## [8.7.0-alpha.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.7.0-alpha.1...8.7.0-alpha.2) (2026-07-31)
 
 ### Features
