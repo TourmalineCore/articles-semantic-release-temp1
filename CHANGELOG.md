@@ -1,5 +1,11 @@
 # Changelog
 
+## [6.0.1-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.0.1-alpha.1) (2026-07-31)
+
+### Refactoring
+
+* rename toPep440 function to normalizeToSemver ([d218e0c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/d218e0c2eb739736d260f882b94886c79a66be7f))
+
 ## [6.0.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/5.1.2...6.0.0) (2026-07-30)
 
 ### ⚠ BREAKING CHANGES
