@@ -13,6 +13,10 @@ module.exports = {
         { "name": '+([0-9]).x/develop', "prerelease": '${name.match(/^(\\d+)\\.x/)[1]}x-alpha' },
     ],
     "tagFormat": '${version}',
+    // Disables CI verification. If set to `true` (by default), Semantic Release 
+    // will not publish a release if it was called from a workflow 
+    // triggered by a `pull_request` event.
+    "ci": false,
     // Plugins https://semantic-release.gitbook.io/semantic-release/extending/plugins-list
     "plugins": [
         [
