@@ -74,24 +74,24 @@ jobs:
           path: dist
           retention-days: 1
 
-  pypi-publish:
-    name: Publish package
-    runs-on: ubuntu-24.04
-    timeout-minutes: 10
-    needs:
-      - release-build
-    permissions:
-      id-token: write
+  # pypi-publish:
+  #   name: Publish package
+  #   runs-on: ubuntu-24.04
+  #   timeout-minutes: 10
+  #   needs:
+  #     - release-build
+  #   permissions:
+  #     id-token: write
 
-    environment:
-      name: pypi
+  #   environment:
+  #     name: pypi
 
-    steps:
-      - name: Retrieve release distributions
-        uses: actions/download-artifact@v7
-        with:
-          name: dist
-          path: dist
+  #   steps:
+  #     - name: Retrieve release distributions
+  #       uses: actions/download-artifact@v7
+  #       with:
+  #         name: dist
+  #         path: dist
 
-      - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@v1.14.0
+  #     - name: Publish package distributions to PyPI
+  #       uses: pypa/gh-action-pypi-publish@v1.14.0
