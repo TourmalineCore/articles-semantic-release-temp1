@@ -44,6 +44,7 @@ jobs:
       - name: Checkout Repository on Release Branch
         uses: actions/checkout@v7
         with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
           fetch-depth: 0
           fetch-tags: true
           token: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN }}
