@@ -1,5 +1,26 @@
 # Changelog
 
+## [8.4.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.3.0...8.4.0) (2026-07-31)
+
+### Features
+
+* [#1](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/1) ([1efe0a9](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/1efe0a97021476743579fa2ec7701a6cf36751da))
+* [#1](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/1) ([35f53ff](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/35f53ff6d360200d29f9b7a53fab88cc04479245))
+* commet ref ([b6ca79e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/b6ca79e00d2e15c4d1905e38b216d2924fddeebe))
+
+## [8.4.0-rc.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.4.0-rc.1...8.4.0-rc.2) (2026-07-31)
+
+### Features
+
+* [#1](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/1) ([1efe0a9](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/1efe0a97021476743579fa2ec7701a6cf36751da))
+
+## [8.4.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.3.0...8.4.0-rc.1) (2026-07-31)
+
+### Features
+
+* [#1](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/1) ([35f53ff](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/35f53ff6d360200d29f9b7a53fab88cc04479245))
+* commet ref ([b6ca79e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/b6ca79e00d2e15c4d1905e38b216d2924fddeebe))
+
 ## [8.4.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.3.0...8.4.0-alpha.1) (2026-07-31)
 
 ### Features
