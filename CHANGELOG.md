@@ -1,5 +1,25 @@
 # Changelog
 
+## [8.2.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.1.0...8.2.0) (2026-07-31)
+
+### Features
+
+* [#15](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/15) ([c49fe37](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c49fe37e76ab9321a753ea910857d02c3465880f))
+* [#16](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/16) ([c05cbfe](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c05cbfe0e285fb999bdb45f056a343922f630b3c))
+* [#17](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/17) ([3b57144](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/3b57144aa728addfb115de2ecbefb6f73c6fc44d))
+* [#17](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/17) ([aa00d1a](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/aa00d1acc1f341eb02db89f13f38940906e76e64))
+* [#17](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/17) ([2dc2380](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/2dc238026e98f900116f7b6bcd122ffa3f52e03d))
+
+## [8.2.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.1.0...8.2.0-rc.1) (2026-07-31)
+
+### Features
+
+* [#15](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/15) ([c49fe37](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c49fe37e76ab9321a753ea910857d02c3465880f))
+* [#16](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/16) ([c05cbfe](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c05cbfe0e285fb999bdb45f056a343922f630b3c))
+* [#17](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/17) ([3b57144](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/3b57144aa728addfb115de2ecbefb6f73c6fc44d))
+* [#17](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/17) ([aa00d1a](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/aa00d1acc1f341eb02db89f13f38940906e76e64))
+* [#17](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/17) ([2dc2380](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/2dc238026e98f900116f7b6bcd122ffa3f52e03d))
+
 ## [8.2.0-alpha.4](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.2.0-alpha.3...8.2.0-alpha.4) (2026-07-31)
 
 ### Features
