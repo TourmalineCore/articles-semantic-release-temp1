@@ -90,6 +90,8 @@ jobs:
         with:
           node-version: 24.18.0
       
+      # [!] Start of the stack-dependent section
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -101,6 +103,8 @@ jobs:
           version: '2.4.1'
           virtualenvs-create: true
           virtualenvs-in-project: true
+
+      # [!] End of the stack-dependent section
 
       - name: Install semantic-release and plugins
         run: |
