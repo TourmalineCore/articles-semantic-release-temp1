@@ -24,7 +24,7 @@ on:
     branches:
       - 'master'
       - '*/master'
-    types: [opened, reopened, synchronize]
+    types: [opened, reopened]
   # If this trigger is removed, then in the event that a release 
   # publication is terminated for unknown reasons (for example, 
   # an attempt to publish an existing tag), it will be difficult 
@@ -44,14 +44,28 @@ jobs:
       cancel-in-progress: false
 
     steps:
-      - name: Checkout Repository on Release Branch
+      - name: Checkout repository on release branch
         uses: actions/checkout@v7
         with:
+          # If a workflow is triggered by a `pull_request` event, `actions/checkout` 
+          # without an explicit `ref` will checkout to the `refs/pull/<PR-id>/merge` 
+          # branch, which will break the semantic release logic.
+          # https://github.com/actions/checkout#push-a-commit-to-a-pr-using-the-built-in-token
           ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
+          # ref: ${{ github.ref_name }}
           fetch-depth: 0
           fetch-tags: true
           token: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN }}
       
+      - name: Debug steps
+        run: |
+          echo ${{ github.ref_name }}
+          echo $GITHUB_ACTIONS
+          echo $GITHUB_EVENT_NAME
+      
+      # By default, `actions/checkout` after fetching leaves the repository in 
+      # a detached HEAD state. A semantic release refers to the name of the 
+      # current local branch; when the HEAD is detached, this name is empty.
       - name: Switch to real named branch
         if: ${{ github.event_name == 'pull_request' }}
         run: git checkout -B "${{ github.head_ref }}"
@@ -135,4 +149,4 @@ jobs:
           GH_TOKEN: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN   }}
         run: |
           unset GITHUB_ACTIONS
-          npx semantic-release --no-ci
+          npx semantic-release
