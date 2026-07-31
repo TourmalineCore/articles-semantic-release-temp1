@@ -43,7 +43,7 @@ module.exports = {
         ],
         {
             prepare: async (pluginConfig, context) => {
-                process.env.PEP440_VERSION = toPep440(context.nextRelease.version);
+                process.env.PEP440_VERSION = normalizeToSemver(context.nextRelease.version);
             },
         },
         [
@@ -75,7 +75,7 @@ module.exports = {
     ],
 };
 
-function toPep440(version) {
+function normalizeToSemver(version) {
     const [base, ...rest] = version.split('-');
 
     if (rest.length === 0)

@@ -1,5 +1,36 @@
 # Changelog
 
+## [8.1.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.0.0...8.1.0-rc.1) (2026-07-31)
+
+### Features
+
+* test commit ([265a01e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/265a01e04871b5aa00e0b031e4e58311a6ce0da5))
+
+### Refactoring
+
+* rename toPep440 function to normalizeToSemver ([d218e0c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/d218e0c2eb739736d260f882b94886c79a66be7f))
+
+## [6.1.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-rc.1) (2026-07-31)
+
+### Features
+
+* test commit ([265a01e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/265a01e04871b5aa00e0b031e4e58311a6ce0da5))
+
+### Refactoring
+
+* rename toPep440 function to normalizeToSemver ([d218e0c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/d218e0c2eb739736d260f882b94886c79a66be7f))
+
+## [6.1.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.1-alpha.1...6.1.0-alpha.1) (2026-07-31)
+
+### Features
+
+* test commit ([265a01e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/265a01e04871b5aa00e0b031e4e58311a6ce0da5))
+
+## [6.0.1-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.0.1-alpha.1) (2026-07-31)
+
+### Refactoring
+
+* rename toPep440 function to normalizeToSemver ([d218e0c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/d218e0c2eb739736d260f882b94886c79a66be7f))
 ## [8.0.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/7.0.0...8.0.0) (2026-07-30)
 
 ### ⚠ BREAKING CHANGES
