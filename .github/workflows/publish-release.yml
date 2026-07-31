@@ -24,7 +24,7 @@ on:
     branches:
       - 'master'
       - '*/master'
-    types: [opened, reopened]
+    types: [opened, reopened, synchronize]
   # If this trigger is removed, then in the event that a release 
   # publication is terminated for unknown reasons (for example, 
   # an attempt to publish an existing tag), it will be difficult 
