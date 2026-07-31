@@ -61,6 +61,8 @@ jobs:
           echo ${{ github.ref_name }}
           echo $GITHUB_ACTIONS
           echo $GITHUB_EVENT_NAME
+          echo ${{ github.sha }}
+          echo ${{ github.event.pull_request.head.sha }}
       
       # By default, `actions/checkout` after fetching leaves the repository in 
       # a detached HEAD state. A semantic release refers to the name of the 
