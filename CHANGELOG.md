@@ -1,5 +1,35 @@
 # Changelog
 
+## [8.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.0.0...8.1.0) (2026-07-31)
+
+### Features
+
+* test commit ([265a01e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/265a01e04871b5aa00e0b031e4e58311a6ce0da5))
+
+### Refactoring
+
+* rename toPep440 function to normalizeToSemver ([d218e0c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/d218e0c2eb739736d260f882b94886c79a66be7f))
+
+## [8.1.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.0.0...8.1.0-rc.1) (2026-07-31)
+
+### Features
+
+* test commit ([265a01e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/265a01e04871b5aa00e0b031e4e58311a6ce0da5))
+
+### Refactoring
+
+* rename toPep440 function to normalizeToSemver ([d218e0c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/d218e0c2eb739736d260f882b94886c79a66be7f))
+
+## [6.1.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-rc.1) (2026-07-31)
+
+### Features
+
+* test commit ([265a01e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/265a01e04871b5aa00e0b031e4e58311a6ce0da5))
+
+### Refactoring
+
+* rename toPep440 function to normalizeToSemver ([d218e0c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/d218e0c2eb739736d260f882b94886c79a66be7f))
+
 ## [6.1.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.1-alpha.1...6.1.0-alpha.1) (2026-07-31)
 
 ### Features
@@ -11,6 +41,103 @@
 ### Refactoring
 
 * rename toPep440 function to normalizeToSemver ([d218e0c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/d218e0c2eb739736d260f882b94886c79a66be7f))
+## [8.0.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/7.0.0...8.0.0) (2026-07-30)
+
+### ⚠ BREAKING CHANGES
+
+* #10
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([4f02751](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/4f02751aeecc04dae86698964ab17eac63e5ebbb))
+
+## [7.0.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.1.1...7.0.0) (2026-07-30)
+
+### ⚠ BREAKING CHANGES
+
+* #10
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([1c5c789](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/1c5c789018346cb1d0ee94984f5c6cf20765c180))
+
+## [6.1.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.1.0...6.1.1) (2026-07-30)
+
+### Bug Fixes
+
+* [#6](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/6) ([0c608ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0c608ed8b978a2d1d6d303cf5a59f0b86faebc7e))
+
+## [6.1.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0) (2026-07-30)
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([c19a630](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c19a630353bc4e56e74450c1ff7d14751de5fef0))
+
+## [6.1.0-hotfix.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-hotfix.1) (2026-07-30)
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([c19a630](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c19a630353bc4e56e74450c1ff7d14751de5fef0))
+
+### Bug Fixes
+
+* [#6](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/6) ([0c608ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0c608ed8b978a2d1d6d303cf5a59f0b86faebc7e))
+
+## [6.1.0-hotfix.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-hotfix.1) (2026-07-30)
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([c19a630](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c19a630353bc4e56e74450c1ff7d14751de5fef0))
+
+### Bug Fixes
+
+* [#6](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/6) ([0c608ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0c608ed8b978a2d1d6d303cf5a59f0b86faebc7e))
+
+## [6.1.0-hotfix.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-hotfix.1) (2026-07-30)
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([c19a630](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c19a630353bc4e56e74450c1ff7d14751de5fef0))
+
+### Bug Fixes
+
+* [#6](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/6) ([0c608ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0c608ed8b978a2d1d6d303cf5a59f0b86faebc7e))
+
+## [6.1.0-hotfix.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-hotfix.1) (2026-07-30)
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([c19a630](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c19a630353bc4e56e74450c1ff7d14751de5fef0))
+
+### Bug Fixes
+
+* [#6](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/6) ([0c608ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0c608ed8b978a2d1d6d303cf5a59f0b86faebc7e))
+
+## [6.1.0-hotfix.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-hotfix.1) (2026-07-30)
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([c19a630](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c19a630353bc4e56e74450c1ff7d14751de5fef0))
+
+### Bug Fixes
+
+* [#6](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/6) ([0c608ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0c608ed8b978a2d1d6d303cf5a59f0b86faebc7e))
+
+## [6.1.0-hotfix.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-hotfix.1) (2026-07-30)
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([c19a630](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c19a630353bc4e56e74450c1ff7d14751de5fef0))
+
+### Bug Fixes
+
+* [#6](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/6) ([0c608ed](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/0c608ed8b978a2d1d6d303cf5a59f0b86faebc7e))
+
+## [6.1.0-hotfix.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.1.0-hotfix.1) (2026-07-30)
+
+### Features
+
+* [#10](https://github.com/TourmalineCore/articles-semantic-release-temp1/issues/10) ([c19a630](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c19a630353bc4e56e74450c1ff7d14751de5fef0))
 
 ## [6.0.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/5.1.2...6.0.0) (2026-07-30)
 

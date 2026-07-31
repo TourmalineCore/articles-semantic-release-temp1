@@ -21,7 +21,7 @@ on:
   # If this trigger is removed, the automatic publication of release 
   # N.N.N-rc.1 will not happen when the release branch is created
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [opened, reopened]
   # If this trigger is removed, then in the event that a release 
   # publication is terminated for unknown reasons (for example, 
   # an attempt to publish an existing tag), it will be difficult 
@@ -90,6 +90,8 @@ jobs:
         with:
           node-version: 24.18.0
       
+      # [!] Start of the stack-dependent section
+
       - name: Set up Python
         uses: actions/setup-python@v6
         with:
@@ -101,6 +103,8 @@ jobs:
           version: '2.4.1'
           virtualenvs-create: true
           virtualenvs-in-project: true
+
+      # [!] End of the stack-dependent section
 
       - name: Install semantic-release and plugins
         run: |
