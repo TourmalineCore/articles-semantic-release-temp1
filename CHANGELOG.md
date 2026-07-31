@@ -1,5 +1,11 @@
 # Changelog
 
+## [8.3.0-rc.3](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.3.0-rc.2...8.3.0-rc.3) (2026-07-31)
+
+### Features
+
+* rollback synchronize ([b597ef2](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/b597ef2271079794817a9c4c3ebf3719802d3445))
+
 ## [8.3.0-rc.2](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.3.0-rc.1...8.3.0-rc.2) (2026-07-31)
 
 ### Features
