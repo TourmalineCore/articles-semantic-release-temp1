@@ -1,5 +1,11 @@
 # Changelog
 
+## [6.1.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.1-alpha.1...6.1.0-alpha.1) (2026-07-31)
+
+### Features
+
+* test commit ([265a01e](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/265a01e04871b5aa00e0b031e4e58311a6ce0da5))
+
 ## [6.0.1-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/6.0.0...6.0.1-alpha.1) (2026-07-31)
 
 ### Refactoring
