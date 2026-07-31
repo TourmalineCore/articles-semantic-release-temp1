@@ -21,7 +21,7 @@ on:
   # If this trigger is removed, the automatic publication of release 
   # N.N.N-rc.1 will not happen when the release branch is created
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [opened, reopened]
   # If this trigger is removed, then in the event that a release 
   # publication is terminated for unknown reasons (for example, 
   # an attempt to publish an existing tag), it will be difficult 
