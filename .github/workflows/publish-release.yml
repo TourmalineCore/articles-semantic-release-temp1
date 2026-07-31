@@ -67,9 +67,9 @@ jobs:
       # By default, `actions/checkout` after fetching leaves the repository in 
       # a detached HEAD state. A semantic release refers to the name of the 
       # current local branch; when the HEAD is detached, this name is empty.
-      # - name: Switch to real named branch
-      #   if: ${{ github.event_name == 'pull_request' }}
-      #   run: git checkout -B "${{ github.head_ref }}"
+      - name: Switch to real named branch
+        if: ${{ github.event_name == 'pull_request' }}
+        run: git checkout -B "${{ github.head_ref }}"
 
       - name: Force release branch to be at workflow sha
         run: |
