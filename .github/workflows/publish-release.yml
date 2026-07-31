@@ -147,6 +147,7 @@ jobs:
           #   issues: write # to be able to comment on released issues
           #   pull-requests: write # to be able to comment on released pull requests
           # GH_TOKEN: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN   }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN   }}
         run: |
           unset GITHUB_ACTIONS
           npx semantic-release
