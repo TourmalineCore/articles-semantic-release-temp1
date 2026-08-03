@@ -58,10 +58,10 @@ jobs:
 
           if [[ "$AUTHOR_NAME" == "semantic-release-bot" \
                 && "$COMMIT_MESSAGE" =~ ^chore\(release\):.* ]]; then
-            echo "The commit with hash `${{ env.COMMIT_SHA }}` is a service commit; workflow skip"
+            echo "The commit with hash '${{ env.COMMIT_SHA }}' is a service commit; workflow skip"
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
-            echo "The commit with hash `${{ env.COMMIT_SHA }}` is not a service commit; continuing the workflow"
+            echo "The commit with hash '${{ env.COMMIT_SHA }}' is not a service commit; continuing the workflow"
             echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
 
