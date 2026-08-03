@@ -1,6 +1,6 @@
 [project]
 name = "ksj8sfs1-test-package"
-version = "8.7.0rc7"
+version = "8.7.0rc8"
 description = ""
 authors = [
     {name = "publisher"}
