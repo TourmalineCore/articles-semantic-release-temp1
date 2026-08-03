@@ -153,5 +153,4 @@ jobs:
           GH_TOKEN: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN   }}
         run: |
           unset GITHUB_ACTIONS
-          exit(1)
-          # npx semantic-release
+          npx semantic-release
