@@ -32,10 +32,10 @@ permissions:
 jobs:
   # The job is needed to check whether a commit is a service commit, 
   # in order to restrict the execution of workflows on service commits
-  detect:
+  detect_semantic_release_service_commit:
     runs-on: ubuntu-24.04
     outputs:
-      skip: ${{ steps.check.outputs.skip }}
+      skip: ${{ steps.check.outputs.IS_SERVICE_COMMIT }}
     env:
       COMMIT_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
 
@@ -59,10 +59,10 @@ jobs:
           if [[ "$AUTHOR_NAME" == "semantic-release-bot" \
                 && "$COMMIT_MESSAGE" =~ ^chore\(release\):.* ]]; then
             echo "The commit with hash '${{ env.COMMIT_SHA }}' is a service commit; workflow skip"
-            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "IS_SERVICE_COMMIT=true" >> "$GITHUB_OUTPUT"
           else
             echo "The commit with hash '${{ env.COMMIT_SHA }}' is not a service commit; continuing the workflow"
-            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "IS_SERVICE_COMMIT=false" >> "$GITHUB_OUTPUT"
           fi
 
   publish_release:
@@ -70,7 +70,7 @@ jobs:
     runs-on: ubuntu-24.04
     needs:
       - detect
-    if: needs.detect.outputs.skip != 'true'
+    if: needs.detect.outputs.IS_SERVICE_COMMIT != 'true'
     concurrency:
       group: ${{ github.workflow }}-release-${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
       cancel-in-progress: false
