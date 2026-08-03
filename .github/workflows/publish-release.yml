@@ -69,8 +69,8 @@ jobs:
     name: Create and publish release 
     runs-on: ubuntu-24.04
     needs:
-      - detect
-    if: needs.detect.outputs.IS_SERVICE_COMMIT != 'true'
+      - detect_semantic_release_service_commit
+    if: needs.detect_semantic_release_service_commit.outputs.IS_SERVICE_COMMIT != 'true'
     concurrency:
       group: ${{ github.workflow }}-release-${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
       cancel-in-progress: false
