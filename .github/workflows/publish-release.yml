@@ -35,9 +35,41 @@ permissions:
   contents: write
 
 jobs:
+  detect:
+    runs-on: ubuntu-24.04
+    outputs:
+      skip: ${{ steps.check.outputs.skip }}
+
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          # 1: We check a specific commit to verify whether it is a service commit or not. If checkout 
+          # is performed by branch name, there is a chance that a commit pushed between the workflow 
+          # trigger and the `detect` job will be subject to this check
+          # 
+          # 2: When triggered by the `pull_request` event, `github.sha` points to a service merge commit, 
+          # so we must use `github.event.pull_request.head.sha`
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
+
+      - id: check
+        name: Detect semantic-release service commit
+        run: |
+          AUTHOR_NAME="$(git log -1 --pretty='%an')"
+          COMMIT_MESSAGE="$(git log -1 --pretty='%s')"
+
+          if [[ "$AUTHOR_NAME" == "semantic-release-bot" \
+                && "$COMMIT_MESSAGE" =~ ^chore\(release\):.* ]]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
   publish_release:
     name: Create and publish release 
     runs-on: ubuntu-24.04
+    needs:
+      - detect
+    if: needs.detect.outputs.skip != 'true'
 
     concurrency:
       group: ${{ github.workflow }}-release-${{ github.ref_name }}
