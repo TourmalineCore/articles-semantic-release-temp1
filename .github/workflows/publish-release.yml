@@ -71,11 +71,8 @@ jobs:
     needs:
       - detect
     if: needs.detect.outputs.skip != 'true'
-    env:
-      BRANCH_REF: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
-
     concurrency:
-      group: ${{ github.workflow }}-release-${{ env.BRANCH_REF }}
+      group: ${{ github.workflow }}-release-${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
       cancel-in-progress: false
 
     steps:
@@ -86,7 +83,7 @@ jobs:
           # without an explicit `ref` will checkout to the `refs/pull/<PR-id>/merge` 
           # branch, which will break the semantic release logic
           # https://github.com/actions/checkout#push-a-commit-to-a-pr-using-the-built-in-token
-          ref: ${{ env.BRANCH_REF }}
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref_name }}
           fetch-depth: 0
           fetch-tags: true
           token: ${{ secrets.TEMP_SEMANTIC_RELEASE_GH_TOKEN }}
