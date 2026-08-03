@@ -33,6 +33,7 @@ jobs:
   # The job is needed to check whether a commit is a service commit, 
   # in order to restrict the execution of workflows on service commits
   detect_semantic_release_service_commit:
+    name: Detect semantic-release service commit
     runs-on: ubuntu-24.04
     outputs:
       skip: ${{ steps.check.outputs.IS_SERVICE_COMMIT }}
