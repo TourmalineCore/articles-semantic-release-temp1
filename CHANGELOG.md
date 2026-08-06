@@ -1,5 +1,33 @@
 # Changelog
 
+## [9.0.0](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.6.0...9.0.0) (2026-08-03)
+
+### ⚠ BREAKING CHANGES
+
+* test commit
+
+### Features
+
+* test commit ([afbc8cb](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/afbc8cba3ee36aba3e32e8dcfa608a88dfe2d21a))
+* test commit ([6cbc395](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/6cbc395fc63f04590020371ca0eff0e49216b597))
+* test commit ([335b339](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/335b339adaf15c26db6be5709a9b1d7ba54a5263))
+* test commit ([7b4b312](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/7b4b3120f898d1366358f5d9fcc4ce4dce017fc0))
+* test commit ([29c349d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/29c349d133e65d06ba7503f02894f9f82463ff6a))
+
+## [9.0.0-rc.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.6.0...9.0.0-rc.1) (2026-08-03)
+
+### ⚠ BREAKING CHANGES
+
+* test commit
+
+### Features
+
+* test commit ([afbc8cb](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/afbc8cba3ee36aba3e32e8dcfa608a88dfe2d21a))
+* test commit ([6cbc395](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/6cbc395fc63f04590020371ca0eff0e49216b597))
+* test commit ([335b339](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/335b339adaf15c26db6be5709a9b1d7ba54a5263))
+* test commit ([7b4b312](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/7b4b3120f898d1366358f5d9fcc4ce4dce017fc0))
+* test commit ([29c349d](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/29c349d133e65d06ba7503f02894f9f82463ff6a))
+
 ## [9.0.0-alpha.1](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/8.7.0-alpha.4...9.0.0-alpha.1) (2026-08-03)
 
 ### ⚠ BREAKING CHANGES
