@@ -27,18 +27,21 @@ jobs:
     name: Create and publish release 
     runs-on: ubuntu-24.04
 
-    # # Controls whether multiple instances of the same workflow can run in parallel. 
-    # # Parallel execution for semantic-release can cause two instances of the workflow 
-    # # that were started concurrently to compute and attempt to publish the identical 
-    # # version, which will result in an error for the second instance
-    # # 
-    # # https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency
-    # concurrency:
-    #   group: ${{ github.workflow }}-release-${{ github.ref_name }}
-    #   # If set to 'true', there is a risk that part of the semantic-release 
-    #   # logic will be executed (for example, creating a tag), while 
-    #   # the other part will be canceled
-    #   cancel-in-progress: false
+    # Controls whether multiple instances of the same workflow can run in parallel. 
+    # Parallel execution for semantic-release can cause two instances of the workflow 
+    # that were started concurrently to compute and attempt to publish the identical 
+    # version, which will result in an error for the second instance
+    # 
+    # https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/control-workflow-concurrency
+    concurrency:
+      group: ${{ github.workflow }}-release-${{ github.ref_name }}
+      # If set to 'true', there is a risk that part of the semantic-release 
+      # logic will be executed (for example, creating a tag), while 
+      # the other part will be canceled
+      cancel-in-progress: false
+      # If 'max' is set, runs of a single workflow instance are 
+      # queued and executed sequentially
+      queue: max
 
     steps:
       - name: Checkout repository on release branch
