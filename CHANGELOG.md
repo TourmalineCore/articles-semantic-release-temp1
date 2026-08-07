@@ -1,5 +1,11 @@
 # Changelog
 
+## [9.0.0-alpha.5](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/9.0.0-alpha.4...9.0.0-alpha.5) (2026-08-07)
+
+### Features
+
+* test commit ([c80893c](https://github.com/TourmalineCore/articles-semantic-release-temp1/commit/c80893c4a46943f05896a6ab19427cde2938992c))
+
 ## [9.0.0-alpha.4](https://github.com/TourmalineCore/articles-semantic-release-temp1/compare/9.0.0-alpha.3...9.0.0-alpha.4) (2026-08-07)
 
 ### Features
